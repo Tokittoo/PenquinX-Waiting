@@ -63,6 +63,66 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#050505] text-white overflow-hidden">
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "http://penquinx.enyard.cloud/#organization",
+                name: "PenquinX",
+                url: "http://penquinx.enyard.cloud",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "http://penquinx.enyard.cloud/PenquinX-logo.jpg",
+                },
+                sameAs: [
+                  "https://enyard.in",
+                ],
+                description: "Revolutionary cybersecurity and bug bounty platform by Enyard",
+              },
+              {
+                "@type": "WebSite",
+                "@id": "http://penquinx.enyard.cloud/#website",
+                url: "http://penquinx.enyard.cloud",
+                name: "PenquinX - Cybersecurity & Bug Bounty Platform",
+                description: "Join PenquinX, the next-generation cybersecurity and bug bounty platform by Enyard",
+                publisher: {
+                  "@id": "http://penquinx.enyard.cloud/#organization",
+                },
+              },
+              {
+                "@type": "Event",
+                "@id": "http://penquinx.enyard.cloud/#launch-event",
+                name: "PenquinX Platform Launch",
+                description: "Official launch of PenquinX cybersecurity and bug bounty platform",
+                startDate: LAUNCH_DATE.toISOString(),
+                eventStatus: "https://schema.org/EventScheduled",
+                eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+                location: {
+                  "@type": "VirtualLocation",
+                  url: "http://penquinx.enyard.cloud",
+                },
+                organizer: {
+                  "@id": "http://penquinx.enyard.cloud/#organization",
+                },
+                offers: {
+                  "@type": "Offer",
+                  availability: "https://schema.org/InStock",
+                  price: "0",
+                  priceCurrency: "USD",
+                  url: "http://penquinx.enyard.cloud",
+                  validFrom: new Date().toISOString(),
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Animated background particles */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-300/20 rounded-full animate-pulse" />
