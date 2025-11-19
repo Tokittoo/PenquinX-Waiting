@@ -37,11 +37,8 @@ function BentoGridDemo() {
     return (
         <section className="w-full">
             <div className="mb-6 text-center sm:mb-7 md:mb-8">
-                <h1 className="mx-auto mt-2 max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-                    Built for relentless {""}
-                    <span className="bg-gradient-to-r from-cyan-300 to-cyan-500 bg-clip-text text-transparent">
-                        skill stacking
-                    </span>
+                <h1 className="mx-auto mt-2 max-w-4xl text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
+                    Built for relentless <span className="bg-gradient-to-r from-cyan-300 to-cyan-500 bg-clip-text text-transparent">skill stacking</span>
                 </h1>
                 <p className="mx-auto mt-3 max-w-2xl text-sm text-white/60 sm:mt-4 sm:text-base md:text-lg">
                     Four precision-built modules designed to stretch your skills and keep the entire drop timeline fully occupied.

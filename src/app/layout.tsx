@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PenguinX Launch",
+  title: "PenquinX Launch",
   description:
-    "A standalone launch page for PenguinX, highlighting the November 26 drop.",
+    "Wait till the Magic Happens",
 };
 
 export default function RootLayout({
