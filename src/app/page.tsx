@@ -2,8 +2,6 @@
 import { BentoGridDemo } from "@/components/Features";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { Target } from "lucide-react";
 
 const buildLaunchDate = () => {
   const now = new Date();
@@ -44,6 +42,7 @@ export default function Home() {
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(LAUNCH_DATE));
   const [mounted, setMounted] = useState(false);
   const [email, setEmail] = useState("");
+  const [penquinx, setPenquinx] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -211,15 +210,28 @@ export default function Home() {
                     </p>
                   </div>
                   <button
-                    className="group/btn relative h-12 w-full overflow-hidden rounded-full border border-white/30 bg-black/70 px-6 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg transition-all duration-300 hover:border-cyan-300/70 hover:bg-cyan-300/10 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] active:scale-98 sm:h-14 sm:px-8 sm:text-sm sm:tracking-[0.3em]"
+                    className={`group/btn relative h-12 w-full overflow-hidden rounded-full border px-6 text-xs font-bold uppercase tracking-[0.2em] shadow-lg transition-all duration-300 sm:h-14 sm:px-8 sm:text-sm sm:tracking-[0.3em] ${penquinx
+                      ? "border-white/20 bg-black/50 text-white/40 cursor-not-allowed"
+                      : "border-white/30 bg-black/70 text-white hover:border-cyan-300/70 hover:bg-cyan-300/10 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] active:scale-98"
+                      }`}
                     onClick={() => {
-                      window.location.href = "https://enyard.in";
+                      if (!penquinx) {
+                        window.location.href = "https://enyard.in";
+                      }
                     }}
+                    disabled={penquinx}
                   >
                     {/* Button text */}
-                    <span className="relative z-10 inline-flex items-center gap-2 transition-colors duration-300 group-hover/btn:text-cyan-300">
-                      Pre-register now
-                      <span className="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                    <span className={`relative z-10 inline-flex items-center gap-2 transition-colors duration-300 ${!penquinx && "group-hover/btn:text-cyan-300"
+                      }`}>
+                      {penquinx ? (
+                        "Wait Till Countdown ends"
+                      ) : (
+                        <>
+                          Pre-register now
+                          <span className="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                        </>
+                      )}
                     </span>
                   </button>
                 </div>
