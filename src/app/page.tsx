@@ -289,7 +289,7 @@ export default function Home() {
               Secure your spot. Limited early access available.
             </p>
             <p className="text-center text-[10px] text-white/50 transition-colors duration-300 hover:text-white/70 sm:text-xs md:text-right">
-              © 2025 PenquinX. All rights reserved.
+              © 2025 PenquinX | Powered by ENYARD. All rights reserved.
             </p>
           </div>
         </footer>
