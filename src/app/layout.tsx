@@ -39,14 +39,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Enyard" }],
   creator: "Enyard",
   publisher: "Enyard",
-  metadataBase: new URL("http://penquinx.enyard.cloud"),
+  metadataBase: new URL("https://penquinx.enyard.cloud"),
   alternates: {
-    canonical: "http://penquinx.enyard.cloud",
+    canonical: "https://penquinx.enyard.cloud",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "http://penquinx.enyard.cloud",
+    url: "https://penquinx.enyard.cloud",
     title: "PenquinX - Revolutionary Cybersecurity & Bug Bounty Platform",
     description:
       "Join PenquinX, the next-generation cybersecurity and bug bounty platform by Enyard. Pre-register for exclusive early access and rewards. Launching November 26, 2025.",
