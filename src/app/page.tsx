@@ -135,7 +135,7 @@ export default function Home() {
           <div className="flex items-center gap-3 sm:gap-4 group cursor-pointer">
             <div className="relative">
               <Image
-                src="/PenquinX-logo.jpg"
+                src="/PenquinX-Logo.jpg"
                 alt="PenquinX logo"
                 width={150}
                 height={150}
