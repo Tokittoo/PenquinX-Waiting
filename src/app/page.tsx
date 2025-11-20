@@ -41,7 +41,6 @@ const panelBackground =
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(LAUNCH_DATE));
   const [mounted, setMounted] = useState(false);
-  const [email, setEmail] = useState("");
   const [penquinx, setPenquinx] = useState(false);
 
   useEffect(() => {
@@ -132,7 +131,7 @@ export default function Home() {
 
       <main className="relative mx-auto w-full max-w-6xl px-4 sm:px-6">
         {/* Header Section */}
-        <header className={`flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-6 transition-all duration-1000 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+        <header className={`flex flex-col items-center justify-between gap-1 sm:flex-row sm:gap-6 mb-6 sm:mb-0 transition-all duration-1000 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
           <div className="flex items-center gap-3 sm:gap-4 group cursor-pointer">
             <div className="relative">
               <Image
@@ -148,6 +147,7 @@ export default function Home() {
             </div>
 
           </div>
+          {/* Launching Date */}
           <div className="flex items-center gap-3">
             <span className="relative rounded-full border border-white/40 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:border-cyan-300/60 hover:bg-cyan-300/10 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] sm:px-5 sm:py-2 sm:text-xs sm:tracking-[0.3em] cursor-pointer">
               <span className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-300/0 via-cyan-300/10 to-cyan-300/0 animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
@@ -254,8 +254,7 @@ export default function Home() {
             {countdown.map((item, index) => (
               <div
                 key={item.label}
-                className={`${panelBackground} group relative px-4 py-5 text-center transition-all duration-300 hover:border-cyan-300/70 hover:text-cyan-100 hover:scale-105 hover:-translate-y-2 sm:px-5 sm:py-6 cursor-pointer ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                style={{ transitionDelay: `${400 + index * 100}ms` }}
+                className={`${panelBackground} group relative px-4 py-5 text-center transition-all duration-300 ease-out hover:border-cyan-300/70 hover:text-cyan-100 hover:scale-105 hover:-translate-y-2 sm:px-5 sm:py-6 cursor-pointer ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               >
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-300/0 via-cyan-300/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -284,12 +283,12 @@ export default function Home() {
 
 
         {/* Footer Note */}
-        <footer className={`mt-8 sm:mt-10 md:mt-12 transition-all duration-1000 delay-900 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <footer className={`mt-8 sm:mt-10 md:mt-12 pb-8 sm:pb-10 md:pb-12 transition-all duration-1000 delay-900 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="flex flex-col items-center gap-3 sm:gap-4 md:flex-row md:justify-between">
-            <p className="text-center text-xs text-white/30 transition-colors duration-300 hover:text-white/50 sm:text-sm md:text-left">
+            <p className="text-center text-xs text-white/60 transition-colors duration-300 hover:text-white/80 sm:text-sm md:text-left">
               Secure your spot. Limited early access available.
             </p>
-            <p className="text-center text-[10px] text-white/20 transition-colors duration-300 hover:text-white/40 sm:text-xs md:text-right">
+            <p className="text-center text-[10px] text-white/50 transition-colors duration-300 hover:text-white/70 sm:text-xs md:text-right">
               © 2025 PenquinX. All rights reserved.
             </p>
           </div>
