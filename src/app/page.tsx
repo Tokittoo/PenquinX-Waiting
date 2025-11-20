@@ -200,10 +200,10 @@ export default function Home() {
                     className={`${panelBackground} group/card relative border-white/15 px-5 py-5 text-center transition-all duration-300 hover:border-cyan-300/40 sm:px-6 sm:py-6 md:text-left overflow-hidden`}
                   >
                     <p className="relative text-[10px] font-semibold uppercase tracking-[0.4em] text-white/50 transition-colors duration-300 group-hover/card:text-cyan-300/80 sm:text-xs sm:tracking-[0.5em]">
-                      20 Tokens
+                      Free 20 Tokens
                     </p>
                     <p className="relative mt-2 text-xl font-bold text-white sm:text-2xl">
-                      For Pre Register
+                      For Limited 30 Seats
                     </p>
                     <p className="relative mt-1.5 text-xs text-white/50 sm:text-sm">
                       Exclusive reward for early adopters
