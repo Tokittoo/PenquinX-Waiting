@@ -174,7 +174,6 @@ export default function Home() {
           {/* CTA Section */}
           <section
             className={`relative overflow-hidden rounded-2xl border border-white/15 bg-gradient-to-br from-[#07090f] via-[#04070c] to-[#010204] p-6 shadow-[0_45px_120px_rgba(0,0,0,0.8)] transition-all duration-300 hover:border-cyan-300/40 sm:p-8 md:p-10 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-            style={{ transitionDelay: '700ms' }}
           >
             {/* Static gradient background */}
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-cyan-400/10 via-transparent to-transparent blur-3xl" />
